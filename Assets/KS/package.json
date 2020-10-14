@@ -9,7 +9,7 @@
     {
       "displayName": "Template FSM",
       "description": "Template FSM to be followed as the beginning",
-      "path": "KS/AI/FSM/SampleFSMs/Template"
+      "path": "KS/AI/FSM/Samples/Template"
     }
   ]
 }
