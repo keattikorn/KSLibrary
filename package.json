@@ -9,12 +9,12 @@
     {
       "displayName": "Template FSM",
       "description": "Template FSM to be followed as the beginning",
-      "path": "KS/AI/FSM/Samples/Template"
+      "path": "AI/FSM/Samples/Template"
     },
     {
       "displayName": "Simple Character AI FSM",
       "description": "Simple Character AI Idle<->Patrol ",
-      "path": "KS/AI/FSM/Samples/SimpleCharacterAI"
+      "path": "AI/FSM/Samples/SimpleCharacterAI"
     }
   ]
 }
