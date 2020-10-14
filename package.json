@@ -1,0 +1,15 @@
+{
+  "name": "com.keattikorn.kslibrary",
+  "displayName": "KS library",
+  "description": "KS library FSM AI etc.",
+  "version": "0.0.1",
+  "unity": "2019.4",
+  "dependencies": {},
+  "samples": [
+    {
+      "displayName": "Template FSM",
+      "description": "Template FSM to be followed as the beginning",
+      "path": "KS/AI/FSM/Samples/Template"
+    }
+  ]
+}
