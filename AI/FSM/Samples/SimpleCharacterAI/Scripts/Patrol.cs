@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
-using UnityStandardAssets.Characters.ThirdPerson;
 
 namespace KS.AI.FSM.SampleFSMs.SimpleCharacterAI
 {
