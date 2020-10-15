@@ -69,7 +69,7 @@ namespace KS.AI.FSM.SampleFSMs.SimpleCharacterAI
 			}
 
 			ScaleCapsuleForCrouching(crouch);
-			PreventStandingInLowHeadroom();
+			//PreventStandingInLowHeadroom();
 
 			// send input and other state parameters to the animator
 			UpdateAnimator(move);
@@ -87,6 +87,7 @@ namespace KS.AI.FSM.SampleFSMs.SimpleCharacterAI
 			}
 			else
 			{
+				
 				Ray crouchRay = new Ray(m_Rigidbody.position + Vector3.up * m_Capsule.radius * k_Half, Vector3.up);
 				float crouchRayLength = m_CapsuleHeight - m_Capsule.radius * k_Half;
 				if (Physics.SphereCast(crouchRay, m_Capsule.radius * k_Half, crouchRayLength, Physics.AllLayers, QueryTriggerInteraction.Ignore))
@@ -97,6 +98,7 @@ namespace KS.AI.FSM.SampleFSMs.SimpleCharacterAI
 				m_Capsule.height = m_CapsuleHeight;
 				m_Capsule.center = m_CapsuleCenter;
 				m_Crouching = false;
+				
 			}
 		}
 
