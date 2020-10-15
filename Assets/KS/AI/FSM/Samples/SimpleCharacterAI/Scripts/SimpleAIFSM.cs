@@ -20,8 +20,8 @@ namespace KS.AI.FSM.SampleFSMs.SimpleCharacterAI
         }
         public NavMeshAgent Agent { get; set; }
 
-        public ThirdPersonCharacter ThirdPersonChar { get; set; }
-        public AICharacterControl AICharControl { get; set; }
+        public ThirdPersonCharacterKSModified ThirdPersonChar { get; set; }
+        public AICharacterControlKSModified AICharControlKsModified { get; set; }
         
         private void Start()
         {
@@ -33,8 +33,8 @@ namespace KS.AI.FSM.SampleFSMs.SimpleCharacterAI
             Anim = GetComponent<Animator>();
             Agent = GetComponent<NavMeshAgent>();
             
-            ThirdPersonChar = GetComponent<ThirdPersonCharacter>();
-            AICharControl = GetComponent<AICharacterControl>();
+            ThirdPersonChar = GetComponent<ThirdPersonCharacterKSModified>();
+            AICharControlKsModified = GetComponent<AICharacterControlKSModified>();
         }
     }
 

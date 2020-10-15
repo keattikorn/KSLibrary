@@ -10,16 +10,16 @@ namespace KS.AI.FSM.SampleFSMs.SimpleCharacterAI
         private int currentWaypointIdx = -1;
 
         private NavMeshAgent agent;
-        private ThirdPersonCharacter thirdPersonCharacter;
-        private AICharacterControl aiCharacterControl;
+        private ThirdPersonCharacterKSModified thirdPersonCharacterKsModified;
+        private AICharacterControlKSModified aiCharacterControlKsModified;
         
         public Patrol(FiniteStateMachine fsm) : base(fsm)
         {
             simpleAIFSM = ((SimpleAIFSM) this.FSM);
             
             agent = ((SimpleAIFSM) this.FSM).Agent;
-            thirdPersonCharacter = ((SimpleAIFSM) this.FSM).ThirdPersonChar;
-            aiCharacterControl = ((SimpleAIFSM) this.FSM).AICharControl;
+            thirdPersonCharacterKsModified = ((SimpleAIFSM) this.FSM).ThirdPersonChar;
+            aiCharacterControlKsModified = ((SimpleAIFSM) this.FSM).AICharControlKsModified;
 
             
         }
@@ -38,7 +38,7 @@ namespace KS.AI.FSM.SampleFSMs.SimpleCharacterAI
                     currentWaypointIdx = i;
                     lastDist = distance;
 
-                    simpleAIFSM.AICharControl.SetTarget(thisWP.transform);
+                    simpleAIFSM.AICharControlKsModified.SetTarget(thisWP.transform);
                 }            
             }
             
@@ -48,13 +48,13 @@ namespace KS.AI.FSM.SampleFSMs.SimpleCharacterAI
 
         public override void Update()
         {
-            if (aiCharacterControl.target != null)
-                agent.SetDestination(aiCharacterControl.target.position);
+            if (aiCharacterControlKsModified.target != null)
+                agent.SetDestination(aiCharacterControlKsModified.target.position);
 
             if (agent.remainingDistance > agent.stoppingDistance)
             {
                 //Move the agent
-                thirdPersonCharacter.Move(agent.desiredVelocity, false, false);
+                thirdPersonCharacterKsModified.Move(agent.desiredVelocity, false, false);
             }
             else
             {
@@ -65,11 +65,11 @@ namespace KS.AI.FSM.SampleFSMs.SimpleCharacterAI
                     currentWaypointIdx++;
 
                 //Set target to the next waypoint
-                aiCharacterControl.SetTarget(simpleAIFSM.wayPoints[currentWaypointIdx]);
-                agent.SetDestination(aiCharacterControl.target.position);
+                aiCharacterControlKsModified.SetTarget(simpleAIFSM.wayPoints[currentWaypointIdx]);
+                agent.SetDestination(aiCharacterControlKsModified.target.position);
 
                 //Stop the character movement
-                thirdPersonCharacter.Move(Vector3.zero, false, false);
+                thirdPersonCharacterKsModified.Move(Vector3.zero, false, false);
             }
         }
 
