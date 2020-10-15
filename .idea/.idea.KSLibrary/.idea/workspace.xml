@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="549164bd-116f-457e-817a-fa0ac36d35f6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/KS/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KS/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="549164bd-116f-457e-817a-fa0ac36d35f6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,7 +79,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602695592914</updated>
-      <workItem from="1602695598083" duration="779000" />
+      <workItem from="1602695598083" duration="990000" />
     </task>
     <servers />
   </component>
