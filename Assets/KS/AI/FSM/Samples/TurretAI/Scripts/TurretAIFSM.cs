@@ -13,6 +13,9 @@ namespace KS.AI.FSM.SampleFSMs.TurretAI
             get { return player; }
         }
 
+        [SerializeField] public Transform bulletLauncherPosition;
+        [SerializeField] public float bulletForceMagnitude = 50;
+                
             
         public float detectDist = 7;
         public float visAngle = 30;
@@ -49,11 +52,11 @@ namespace KS.AI.FSM.SampleFSMs.TurretAI
         public void Attack()
         {
             GameObject go = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            go.transform.position = Turret.transform.position + (Turret.transform.forward*1.2f);
+            go.transform.position = bulletLauncherPosition.position;
             go.transform.localScale = new Vector3(0.2f,0.2f,0.2f);
             Rigidbody rb = go.AddComponent<Rigidbody>();
             rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
-            rb.AddForce(Turret.transform.forward*50,ForceMode.Impulse);
+            rb.AddForce(bulletLauncherPosition.forward*bulletForceMagnitude,ForceMode.Impulse);
             Destroy(go,5);
         }
     }
